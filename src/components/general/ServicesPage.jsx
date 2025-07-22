@@ -6,14 +6,12 @@ import Services from './Services';
 
 const ServicesPage = () => {
 
-    const [selected, setSelected] = useState("brand")
-
-
+    const [selected, setSelected] = useState("first")
 
     return (
 
 
-        <div className="flex mt-20 items-center">
+        <div className="flex mt-20 items-center mb-20">
             {/* 1 */}
             <div className="basis-[20%] shrink-0 grow-0 ">
                 <ServicesSelector selected={selected} setSelected={setSelected} />

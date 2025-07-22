@@ -7,21 +7,21 @@ const ServicesSelector = ({selected , setSelected}) => {
         <div>
             <div className="frame-outer mt-4 flex w-fit items-stretch justify-center p-1 2xl:absolute 2xl:left-8 2xl:border-[1px] 2xl:border-stone-300/25 2xl:shadow-2xl 2xl:shadow-stone-500/15 2xl:backdrop-blur-3xl rounded-4xl">
                 <nav className="frame-inner rounded-4xl relative grid grid-cols-4  bg-white backdrop-blur-2xl 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-2 2xl:p-2">
-                    {services.map((label, index) => (
+                    {services.map((item, index) => (
                         <button
-                            onClick={() => setSelected(label) }
+                            onClick={() => setSelected(item.key) }
                             key={index}
-                            className={`relative rounded-2xl text-sm font-[450] transition-colors duration-300 focus:outline-none text-neutral-400 hover:text-neutral-500 ${selected == label ? "text-black font-bold" : 'text-neutral-400 hover:text-neutral-500' } `}
+                            className={`relative rounded-2xl text-sm font-[450] transition-colors duration-300 focus:outline-none text-neutral-400 hover:text-neutral-500 ${selected == item.key ? "text-black font-bold" : 'text-neutral-400 hover:text-neutral-500' } `}
                         >
                             <span className="relative z-10 flex flex-col">
                                 {/* 2XL View: Vertical layout */}
                                 <span className="hidden aspect-[4/5] items-start justify-end border-dotted border-neutral-200/80 p-4 text-neutral-400 2xl:flex 2xl:flex-col">
-                                    <span className="text-neutral-400">{label.label}</span>
+                                    <span className="text-neutral-400">{item.label}</span>
                                 </span>
 
                                 {/* Default View: Horizontal layout */}
                                 <span className="mt-1 block px-4 py-3 text-center 2xl:hidden text-neutral-400">
-                                    {label}
+                                    {item.label}
                                 </span>
                             </span>
 

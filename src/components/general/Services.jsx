@@ -6,7 +6,7 @@ import React from "react";
 
 const Services = ({selected}) => {
 
-    const currentService = servicesData[selected]
+  const currentService = servicesData[selected] 
 
   return (
     <div className="frame-outer relative h-full w-full max-w-[calc(100vw-2rem)] shadow-xl shadow-stone-500/5 md:max-w-[450px] 2xl:max-w-[1100px] rounded-4xl">
@@ -30,7 +30,7 @@ const Services = ({selected}) => {
           <div className="flex flex-1 flex-col justify-between gap-2 p-4 pb-6 2xl:order-1 2xl:w-5/12 2xl:p-2 2xl:text-left">
             {/* Navigation Buttons */}
             <nav className="flex justify-center gap-2 text-sm md:text-base 2xl:justify-start 2xl:gap-0 2xl:space-x-2">
-              {identities.map((item, idx) => (
+              {currentService.buttons.map((item, idx) => (
                 <div className="relative" key={idx}>
                   {/* Mobile Button */}
                   <button
@@ -52,7 +52,7 @@ const Services = ({selected}) => {
                   >
                     <div className="relative z-10 flex h-full w-full flex-col justify-between text-left">
                       <div className="flex items-center">
-                        {item.shortcut.split("+").map((key, keyIdx) => (
+                        {item.split("+").map((key, keyIdx) => (
                           <span
                             key={keyIdx}
                             className="w-fit rounded-lg border-[1px] border-neutral-200 bg-neutral-200/25 px-2 py-1 text-xs font-normal text-neutral-400"
