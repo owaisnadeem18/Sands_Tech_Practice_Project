@@ -26,6 +26,7 @@ const GridGallery = () => {
                   poster="https://image.mux.com/OnemXGNOXH7wLlm8ql2aJ8TxPbKyN8QN6NBNsoi1oCk/thumbnail.jpg"
                   autoPlay
                   playsInline
+                  muted
                   loop
                   preload="metadata"
                   disablePictureInPicture
@@ -63,6 +64,7 @@ const GridGallery = () => {
                       autoPlay
                       playsInline
                       loop
+                      muted
                       preload="metadata"
                       disablePictureInPicture
                       controlsList="nodownload"
@@ -97,6 +99,8 @@ const GridGallery = () => {
                       poster="https://image.mux.com/01cEjb4KT7loGeMCdScL8E9uR54BBbKTIWWXoOSrhNgk/thumbnail.jpg"
                       playsInline
                       loop
+                      autoPlay
+                      muted
                       preload="metadata"
                       disablePictureInPicture
                       disableRemotePlayback
@@ -140,6 +144,8 @@ const GridGallery = () => {
                       poster="https://image.mux.com/7702sO36Citl31Kb1eGzGf7iEAa6jOkU3oKTq5hHEezg/thumbnail.jpg"
                       playsInline
                       loop
+                      muted
+                      autoPlay
                       preload="metadata"
                       disablePictureInPicture
                       disableRemotePlayback
