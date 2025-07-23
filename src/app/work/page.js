@@ -1,5 +1,5 @@
-import WorkHeadingSection from '@/components/general/WorkHeadingSection'
-import WorkHeroSection from '@/components/general/WorkHeroSection'
+import WorkHeadingSection from '@/components/work/WorkHeadingSection'
+import WorkHeroSection from '@/components/work/WorkHeroSection'
 import React from 'react'
 
 const Index = () => {
