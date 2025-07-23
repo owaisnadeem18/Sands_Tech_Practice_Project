@@ -2,11 +2,45 @@
 
 import { servicesData } from "@/data/servicesDynamicData";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const Services = ({selected}) => {
+const Services = ({ selected }) => {
 
-  const currentService = servicesData[selected] 
+  const [currentService, setCurrentService] = useState(servicesData[selected])
+  const [currentContent, setCurrentContent] = useState({
+    title: currentService.title,
+    description: currentService.description,
+    image: currentService.image
+  })
+
+
+  const buttonHanlder = (itemData) => {
+    setCurrentContent({
+      title: itemData.title,
+      description: itemData.description,
+      image: itemData.image,
+    })
+  }
+
+  console.log(currentContent.title)
+  console.log(currentContent.description)
+  console.log(currentContent.image)
+
+  useEffect(() => {
+    // setCurrentService(servicesData[selected])
+
+    const newService = servicesData[selected];
+    setCurrentService(newService);
+    setCurrentContent({
+    title: newService.title,
+    description: newService.description,
+    image: newService.image,
+  });
+
+  }, [selected])
+
+
+  console.log(servicesData[selected], "servicesData[selected]")
 
   return (
     <div className="frame-outer relative h-full w-full max-w-[calc(100vw-2rem)] shadow-xl shadow-stone-500/5 md:max-w-[450px] 2xl:max-w-[1100px] rounded-4xl">
@@ -17,8 +51,8 @@ const Services = ({selected}) => {
             <div className="aspect-square min-h-[400px] w-full 2xl:h-[640px] 2xl:p-4">
               <div className="relative h-full w-full">
                 <Image
-                  src= {currentService.image}
-                  alt={currentService.title}
+                  src={currentContent.image}
+                  alt={currentContent.title}
                   fill
                   className="object-cover frame-inner rounded-4xl"
                 />
@@ -32,49 +66,44 @@ const Services = ({selected}) => {
             <nav className="flex justify-center gap-2 text-sm md:text-base 2xl:justify-start 2xl:gap-0 2xl:space-x-2">
               {currentService.buttons.map((item, idx) => (
                 <div className="relative" key={idx}>
-                  {/* Mobile Button */}
-                  <button
-                    className={`relative flex items-center justify-center overflow-hidden font-[450] focus:outline-none ${
-                      item.active
-                        ? "text-neutral-500"
-                        : "text-neutral-400/70 hover:text-neutral-500"
-                    } 2xl:hidden`}
-                  >
-                  </button>
 
                   {/* 2XL Box Button */}
                   <button
-                    className={`frame-inner rounded-4xl hidden h-32 w-32 items-center justify-center overflow-hidden p-4 font-[450] focus:outline-none border border-neutral-200/80 2xl:flex ${
-                      item.active
-                        ? "bg-neutral-50 text-neutral-500"
-                        : "text-neutral-400/70 hover:text-neutral-500"
-                    }`}
+                    onClick={() => buttonHanlder(item)}
+                    className={`frame-inner cursor-pointer hidden h-32 w-32 items-center justify-center overflow-hidden rounded-4xl border border-neutral-200/80 p-4 font-[450] focus:outline-none transition duration-300 ease-in-out 2xl:flex ${item.active
+                      ? "bg-neutral-50 text-neutral-500"
+                      : "text-neutral-400/70 hover:text-neutral-500"
+                      }`}
                   >
-                    <div className="relative z-10 flex h-full w-full flex-col justify-between text-left">
-                      <div className="flex items-center">
-                        {item.split("+").map((key, keyIdx) => (
-                          <span
-                            key={keyIdx}
-                            className="w-fit rounded-lg border-[1px] border-neutral-200 bg-neutral-200/25 px-2 py-1 text-xs font-normal text-neutral-400"
-                          >
-                            {key.trim()}
-                          </span>
+                    <div className="z-10 flex h-full w-full flex-col justify-between text-left">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {item.keys.split("+").map((key, keyIdx) => (
+                          <div key={keyIdx} className="flex items-center gap-1">
+                            <span className="rounded-lg border border-neutral-200 bg-neutral-200/25 px-2 py-1 text-xs font-normal text-neutral-400">
+                              {key.trim()}
+                            </span>
+                            {keyIdx < item.keys.split("+").length - 1 && (
+                              <span className="text-neutral-400">+</span>
+                            )}
+                          </div>
                         ))}
                       </div>
-                      <span className="p-2">{item.title}</span>
+
+                      <span className="p-2 text-sm text-neutral-600">{item.label}</span>
                     </div>
                   </button>
                 </div>
               ))}
             </nav>
 
+
             {/* Description */}
             <div className="flex flex-col items-center justify-center text-center 2xl:items-start 2xl:space-y-4 2xl:p-4 2xl:text-left">
               <h1 className="hidden text-3xl text-neutral-500 2xl:block">
-                {currentService.title}
+                {currentContent.title}
               </h1>
               <h2 className="text-pretty text-neutral-400 md:w-10/12 md:text-lg 2xl:text-xl">
-                {currentService.description}
+                {currentContent.description}
               </h2>
             </div>
           </div>

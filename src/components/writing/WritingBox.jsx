@@ -11,7 +11,7 @@ const WritingBox = () => {
       <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8">
         <div className="flex w-full flex-col items-center justify-center gap-6 md:flex-wrap md:justify-center">
           <div className="mx-auto flex w-full items-center justify-center">
-            <div className="rounded-r-4xl rounded-l-4xl frame-outer group relative flex h-full w-full max-w-[400px] overflow-hidden border-2 p-1 hover:scale-[.99] border-orange-300/10 shadow-lg shadow-orange-300/5 transition-all duration-500 ease-in-out hover:border-orange-300/20 hover:shadow-sm hover:shadow-orange-300/5">
+            <div className="rounded-r-4xl bg-white rounded-l-4xl frame-outer group relative flex h-full w-full max-w-[400px] overflow-hidden border-2 p-1 hover:scale-[.99] border-orange-300/10 shadow-lg shadow-orange-300/5 transition-all duration-500 ease-in-out hover:border-orange-300/20 hover:shadow-sm hover:shadow-orange-300/5">
               
               {/* Image Section */}
               <div className="frame-inner relative h-[500px] w-full origin-center cursor-pointer overflow-hidden">

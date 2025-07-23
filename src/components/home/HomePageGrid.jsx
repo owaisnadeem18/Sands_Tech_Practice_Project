@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import heroImg from "@/assets/images/dropBoxImg.webp"
 
 const GridGallery = () => {
   return (
@@ -118,14 +119,14 @@ const GridGallery = () => {
               <div className="frame-inner flex h-full w-full cursor-pointer items-center gap-4 rounded-4xl bg-white/30 p-2 shadow-sm transition-all duration-300 ease-in-out hover:bg-white/90 md:p-2">
                 <div className="aspect-square h-fit w-5/12 overflow-hidden rounded-full shadow-md md:rounded-3xl">
                   <div className="relative h-full w-full focus:outline-none focus:ring-0">
-                    {/* <Image
+                    <Image
                   alt="Superpower"
                   src= {heroImg}
                   fill
                   className="object-cover focus:outline-none focus:ring-0"
                   sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1920px) 1920px, 2560px"
                   priority
-                /> */}
+                />
                   </div>
                 </div>
                 <div className="flex-grow-2 flex w-full flex-col">

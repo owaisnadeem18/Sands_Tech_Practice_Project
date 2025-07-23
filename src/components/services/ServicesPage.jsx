@@ -13,7 +13,7 @@ const ServicesPage = () => {
 
         <div className="flex mt-20 items-center mb-20">
             {/* 1 */}
-            <div className="basis-[20%] shrink-0 grow-0 ">
+            <div className="basis-[22%] shrink-0 grow-0 ">
                 <ServicesSelector selected={selected} setSelected={setSelected} />
             </div>
             {/* 2 */}
