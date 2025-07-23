@@ -1,8 +1,15 @@
+"use client"
+
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+
+  const path = usePathname() 
+  const isHome = path === "/"
+
   return (
-    <footer className="relative flex flex-col items-center justify-center gap-4 py-8 md:flex-row md:gap-8 bg-white">
+    <footer className={`relative flex flex-col items-center justify-center gap-4 py-8 md:flex-row md:gap-8 ${ isHome ? "bg-white" : ""}`}>
       <a
         href="https://instagram.com/daybreakstudio"
         target="_blank"

@@ -1,15 +1,45 @@
+"use client"
+
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Header = () => {
+
+  const [showHeader , setShowHeader] = useState(true)
+  const [lastScrollY , setLastScrollY] = useState(0)
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > lastScrollY && currentScrollY > 10) {
+        setShowHeader(false)
+      }
+      else {
+        setShowHeader(true)
+      }
+
+      setLastScrollY(currentScrollY)
+      
+    }
+
+    window.addEventListener("scroll" , handleScroll)
+
+    return () => window.removeEventListener("scroll" , handleScroll)
+
+  } , [])
+
   return (
     <nav
-  className="pointer-events-auto fixed left-0 right-0 top-0 mt-3 flex w-screen justify-center z-[50]"
-  style={{ opacity: 1, filter: 'blur(0px)', willChange: 'auto' }}
->
+      className={`pointer-events-auto fixed left-0 right-0 top-0 z-[50] mt-3 flex w-screen justify-center transition-transform duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+      // style={{ opacity: 1, filter: "blur(0px)", willChange: "transform" }}
+    >
   <div className="frame-outer mt-1 flex w-fit items-stretch justify-center overflow-hidden border border-neutral-300/25 rounded-4xl bg-neutral-50 mix-blend-multiply shadow-lg shadow-neutral-500/5 backdrop-blur-3xl">
     {/* Logo */}
-    <a
+    <Link
       className="frame-inner group pointer-events-none relative flex items-stretch focus:outline-none md:pointer-events-auto"
       href="/"
     >
@@ -30,14 +60,14 @@ const Header = () => {
       <div className="hidden md:block">
         <span className="pill frame-inner absolute inset-0 z-0 before:pointer-events-none before:absolute before:inset-0 before:rounded-[30px] before:bg-[radial-gradient(circle_at_50%_50%,rgba(255,245,230,0.5)_0%,rgba(255,240,235,0.4)_25%,rgba(250,235,245,0.3)_50%,rgba(245,240,255,0.2)_75%,rgba(250,250,255,0.1)_100%)] before:p-[1px] before:opacity-0 before:transition-opacity before:duration-500 group-hover:before:opacity-100 md:border md:border-neutral-600/5 md:bg-white md:shadow-lg md:shadow-neutral-500/15" />
       </div>
-    </a>
+    </Link>
 
 
 
     {/* Desktop Nav Links */}
     <div className="items relative hidden space-x-1 md:flex">
       {['Services', 'Work', 'Writing', 'About', 'Contact'].map((item) => (
-        <a
+        <Link
           key={item}
           className="frame-inner group focus:outline-none"
           href={`/${item.toLowerCase()}`}
@@ -45,7 +75,8 @@ const Header = () => {
           <h1 className="relative px-3 py-3 text-xs font-normal text-neutral-500 group-hover:text-neutral-700">
             <span className="relative z-10">{item}</span>
           </h1>
-        </a>
+        </Link>
+        
       ))}
     </div>
   </div>

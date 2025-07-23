@@ -6,12 +6,12 @@ const ServicesSelector = ({selected , setSelected}) => {
     return (
         <div>
             <div className="frame-outer mt-4 flex w-fit items-stretch justify-center p-1 2xl:absolute 2xl:left-8 2xl:border-[1px] 2xl:border-stone-300/25 2xl:shadow-2xl 2xl:shadow-stone-500/15 2xl:backdrop-blur-3xl rounded-4xl">
-                <nav className="frame-inner rounded-4xl relative grid grid-cols-4  bg-white backdrop-blur-2xl 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-2 2xl:p-2">
+                <nav className="frame-inner rounded-4xl relative grid grid-cols-4  backdrop-blur-2xl 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-2 2xl:p-2">
                     {services.map((item, index) => (
                         <button
                             onClick={() => setSelected(item.key) }
                             key={index}
-                            className={`relative rounded-2xl text-sm font-[450] transition-colors duration-300 focus:outline-none text-neutral-400 hover:text-neutral-500 ${selected == item.key ? "text-black font-bold" : 'text-neutral-400 hover:text-neutral-500' } `}
+                            className={`relative cursor-pointer rounded-2xl text-sm font-[450] transition-colors duration-300 focus:outline-none text-neutral-400 hover:text-neutral-500 `}
                         >
                             <span className="relative z-10 flex flex-col">
                                 {/* 2XL View: Vertical layout */}
@@ -26,7 +26,7 @@ const ServicesSelector = ({selected , setSelected}) => {
                             </span>
 
                             {/* Background Frame */}
-                            <span className="frame-inner absolute inset-0 z-0 border-[1px] border-stone-600/5 bg-white/30 shadow-lg shadow-stone-500/15 backdrop-blur-2xl 2xl:rounded-2xl" />
+                            <span className={`frame-inner absolute inset-0 z-0 border-[1px] ${selected == item.key ? "bg-white" : "bg-white/30" } border-stone-600/5 shadow-lg shadow-stone-500/15 backdrop-blur-2xl 2xl:rounded-2xl`} />
                         </button>
                     ))}
                 </nav>
