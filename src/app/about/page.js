@@ -3,8 +3,9 @@ import VideoCarousel from '@/components/about/TeamCarosuel'
 import React from 'react'
 
 const Index = () => {
+
   return (
-    <div className='min-h-screen' >
+    <div >
         <AboutContent/>
         <VideoCarousel/>
     </div>

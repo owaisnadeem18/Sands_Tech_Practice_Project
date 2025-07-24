@@ -42,3 +42,22 @@ body {
   background-color: grey !important; /* or gray */
   opacity: 1;
 }
+
+/* Ensure Swiper's default bottom positioning is overridden */
+.swiper-pagination {
+  bottom: unset !important;
+  bottom: 10% !important;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+ }
+
+/* Optional: Style individual pagination dots if desired */
+.swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.4); /* Darker inactive dots */
+  opacity: 1; /* Ensure they are visible */
+}
+
+.swiper-pagination-bullet-active {
+  background: #333; /* Darker active dot */
+}
