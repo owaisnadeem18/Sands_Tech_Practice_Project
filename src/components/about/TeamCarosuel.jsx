@@ -4,16 +4,9 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
-
-// Import Swiper styles
+import { peopleData } from "@/data/teamData";
 import "swiper/css";
 import "swiper/css/pagination";
-
-// =============================================================================
-// DATA DEFINITIONS
-// Ensure the order of items in 'videos' and 'peopleData' arrays is identical
-// as they are linked by their array index.
-// =============================================================================
 
 const videos = [
   "/team/taha-unscreen.gif",
@@ -21,44 +14,6 @@ const videos = [
   "/team/alvin-leung-unscreen.gif",
   "/team/rafi-rizky-unscreen.gif",
   "/team/Jenny-Rudziensky-unscreen.gif",
-];
-
-const peopleData = [
-  {
-    name: "Taha Hossain",
-    title: "CEO / Intern", // This matches your new HTML structure
-    motto: "Making things, and shaping people.",
-    hobby: "Racing (NEEEUR) 🏁",
-    fruit: "Persimmon",
-  },
-  {
-    name: "Ross Chan",
-    title: "Motion Designer", // Updated title to match your new HTML example
-    motto: "Building delightful experiences.",
-    hobby: "Cooking 🍳",
-    fruit: "Apple",
-  },
-  {
-    name: "Alvin Leung",
-    title: "Lead Developer",
-    motto: "Bringing ideas to life with code.",
-    hobby: "Gaming 🎮",
-    fruit: "Banana",
-  },
-  {
-    name: "Rafi Rizky",
-    title: "UI/UX Designer",
-    motto: "Crafting intuitive and beautiful interfaces.",
-    hobby: "Drawing 🎨",
-    fruit: "Grapes",
-  },
-  {
-    name: "Jenny Rudziensky",
-    title: "Marketing Specialist",
-    motto: "Connecting with our audience.",
-    hobby: "Hiking ⛰️",
-    fruit: "Strawberry",
-  },
 ];
 
 // =============================================================================

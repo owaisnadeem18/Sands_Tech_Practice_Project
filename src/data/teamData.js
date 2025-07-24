@@ -1,28 +1,22 @@
-export const aboutTeamData = [
+export const peopleData = [
   {
     name: "Taha Hossain",
-    title: "CEO / Intern",
-    video: "/team/taha.mp4"
+    title: "CEO / Intern", // This matches your new HTML structure
   },
   {
     name: "Ross Chan",
-    title: "Motion Designer",
-    video: "/team/ross chan.mp4"
+    title: "Motion Designer", // Updated title to match your new HTML example
   },
   {
-    name: "Zara Shaikh",
-    title: "Product Designer",
-    video: "/team/alvin leung.mp4"
-  },
-  
-  {
-    name: "Rafi Rizky",
-    title: "Motion Designer",
-    video: "/team/rafi rizky.mp4"
+    name: "Alvin Leung",
+    title: "Lead Developer",
   },
   {
     name: "Rafi Rizky",
-    title: "Associate Crative Director",
-    video: "/team/jenny rudziensky.mp4"
+    title: "UI/UX Designer",
   },
-]
+  {
+    name: "Jenny Rudziensky",
+    title: "Marketing Specialist",
+  },
+];
