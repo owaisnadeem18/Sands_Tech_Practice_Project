@@ -11,7 +11,8 @@ const Services = ({ selected }) => {
   const [currentContent, setCurrentContent] = useState({
     title: currentService.title,
     description: currentService.description, 
-    image: currentService.image
+    image: currentService.image,
+    video: currentService.video,
   })
 
 
@@ -20,12 +21,17 @@ const Services = ({ selected }) => {
       title: itemData.title,
       description: itemData.description,
       image: itemData.image,
+      video: itemData.video
     })
   }
 
   console.log(currentContent.title)
   console.log(currentContent.description)
   console.log(currentContent.image)
+  console.log(currentContent.video)
+
+  console.log(currentService.Image)
+  console.log(currentService)
 
   useEffect(() => {
     // setCurrentService(servicesData[selected])
@@ -36,6 +42,7 @@ const Services = ({ selected }) => {
     title: newService.title,
     description: newService.description,
     image: newService.image,
+    video: newService.video
   });
 
   }, [selected])
@@ -48,12 +55,26 @@ const Services = ({ selected }) => {
           <div className="relative h-full w-full 2xl:order-2 2xl:w-7/12 rounded-4xl">
             <div className="aspect-square min-h-[400px] w-full 2xl:h-[640px] 2xl:p-4">
               <div className="relative h-full w-full">
-                <Image
-                  src={currentContent.image}
-                  alt={currentContent.title}
-                  fill
-                  className="object-cover frame-inner rounded-4xl"
-                />
+                {
+                  currentContent.video ?
+                  <video
+                    className="object-cover frame-inner rounded-4xl w-full h-full"
+                    src={currentContent.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  /> :
+                    currentContent.image ? 
+                    <Image
+                    src={currentContent.image}
+                    alt={currentContent.title}
+                    fill
+                    className="object-cover frame-inner rounded-4xl"
+                    />
+                    : null
+                  
+                }
               </div>
             </div>
           </div>

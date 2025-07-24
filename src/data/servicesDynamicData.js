@@ -1,10 +1,19 @@
+import { brandServiceButton1 } from "@/assets";
+import { brandServiceButton2 } from "@/assets";
+import { brandServiceButton3 } from "@/assets";
+import { productServicesButton1 } from "@/assets";
+import { productServicesButton2 } from "@/assets";
+import { webServicesButton1 } from "@/assets";
+import { webServicesButton2 } from "@/assets";
+import { webServicesButton3 } from "@/assets";
+
 export const servicesData = {
   first: {
     title: "Identities",
     description:
       "Craft brand identities from the ground up and transforming raw ideas into cohesive and compelling brand experiences.",
     image:
-      "https://cdn.sanity.io/images/oxbtrss9/production/17bc8ce16f8e58840e4f21763816de8f68ad2c60-1500x1500.jpg",
+      brandServiceButton1 ,
     buttons: [
       {
         keys: "Shift + 1",
@@ -13,7 +22,8 @@ export const servicesData = {
         description:
           "Craft brand identities from the ground up and transforming raw ideas into cohesive and compelling brand experiences.",
         image:
-          "https://cdn.sanity.io/images/oxbtrss9/production/17bc8ce16f8e58840e4f21763816de8f68ad2c60-1500x1500.jpg",
+          brandServiceButton1 ,
+          video: null
       },
       {
         keys: "Shift + 2",
@@ -21,105 +31,110 @@ export const servicesData = {
         title: "Visual Refresh",
         description:
           "Give your brand a new look while maintaining its essence and values.",
-        image: "https://example.com/refreshes.jpg",
+        image: brandServiceButton2,
+        video: null
       },
       {
         keys: "Shift + 3",
         label: "Application",
         title: "Brand Application",
         description: "Applying brand across all digital and print mediums.",
-        image: "https://example.com/application.jpg",
+        image: brandServiceButton3,
+        video: null
       },
     ],
   },
   second: {
-    title: "Refreshes",
+    title: "Design",
     description:
-      "Refresh existing brands with new perspective while preserving core values and recognition.",
+      "Beautiful, intuitive products that users love, built with meticulous attention to detail and focused on delivering exceptional user experiences.",
     image:
-      "https://cdn.sanity.io/images/oxbtrss9/production/17bc8ce16f8e58840e4f21763816de8f68ad2c60-1500x1500.jpg",
+      productServicesButton1,
 
     buttons: [
       {
         keys: "Shift + 1",
         label: "Design",
-        title: "UX/UI Design",
-        description: "Design intuitive interfaces for better user engagement.",
-        image: "https://example.com/design.jpg",
+        title: "Design",
+        description: "Beautiful, intuitive products that users love, built with meticulous attention to detail and focused on delivering exceptional user experiences.",
+        image: productServicesButton1,
+        video: null
       },
       {
         keys: "Shift + 2",
         label: "Research",
-        title: "User Research",
-        description: "Conduct research to understand your audience better.",
-        image: "https://example.com/research.jpg",
+        title: "Research",
+        description: "Data-driven user research that uncovers real insights, helping you make confident product decisions and reduce time to market.",
+        image: productServicesButton2,
+        video: null
       },
       {
         keys: "Shift + 3",
         label: "Prototyping",
-        title: "Interactive Prototyping",
-        description: "Bring concepts to life with functional mockups.",
-        image: "https://example.com/prototyping.jpg",
+        title: "Prototyping",
+        description: "Interactive prototypes that turn concepts into engaging, seamless, and real-world experiences.",
+        video: "/videos/product-button-video-3.mp4",
       },
     ],
   },
   third: {
-    title: "Application",
+    title: "Launch",
     description:
-      "Apply your brand across digital and physical assets to create a consistent experience.",
-    image:
-      "https://cdn.sanity.io/images/oxbtrss9/production/17bc8ce16f8e58840e4f21763816de8f68ad2c60-1500x1500.jpg",
+      "Compelling product launch videos that showcase your innovation, designed to captivate investors and early adopters.",
+
+    video: "/videos/motion-button-video-1.mp4",
+
     buttons: [
       {
         keys: "Shift + 1",
         label: "Launch",
-        title: "Brand Launch",
-        description: "Introduce your brand to the world with impact.",
-        image: "https://example.com/launch.jpg",
+        title: "Launch",
+        description: "Compelling product launch videos that showcase your innovation, designed to captivate investors and early adopters.",
+        video: "/videos/motion-button-video-1.mp4"
       },
       {
         keys: "Shift + 2",
         label: "Interactive",
-        title: "Interactive Experiences",
-        description: "Engage your users with meaningful interactions.",
-        image: "https://example.com/interactive.jpg",
+        title: "Interactive",
+        description: "Thoughtfully crafted UI animations that elevate user experiences, bringing interfaces to life with delightful micro-interactions.",
+        video: "videos/motion-button-video-2.mp4"
       },
       {
         keys: "Shift + 3",
         label: "Marketing",
-        title: "Marketing Collaterals",
-        description: "Design print and digital assets for campaigns.",
-        image: "https://example.com/marketing.jpg",
+        title: "Marketing",
+        description: "Engaging product demonstrations and UI animations that communicate value clearly, helping you stand out in a crowded market.",  
+        video: "videos/motion-button-video-3.mp4"
       },
     ],
   },
   four: {
-    title: "Development",
+    title: "Landing",
     description:
-      "Build scalable, performant web experiences using modern technologies tailored to your needs.",
+      "Bold, memorable landing pages that make a lasting first impression, turning curious visitors into customers.",
     image:
-      "https://cdn.sanity.io/images/oxbtrss9/production/17bc8ce16f8e58840e4f21763816de8f68ad2c60-1500x1500.jpg",
+      webServicesButton1,
     buttons: [
       {
         keys: "Shift + 1",
-        label: "landing",
-        title: "Landing Pages",
-        description: "High-converting landing pages for your campaigns.",
-        image: "https://example.com/landing.jpg",
+        label: "Landing",
+        title: "Landing",
+        description: "Bold, memorable landing pages that make a lasting first impression, turning curious visitors into customers.",
+        image: webServicesButton1
       },
       {
         keys: "Shift + 2",
         label: "Content",
-        title: "Content Sites",
-        description: "Build blogs and CMS-backed content platforms.",
-        image: "https://example.com/content.jpg",
+        title: "Content",
+        description: "Richly crafted blogs and editorial experiences that elevate your brand's voice, creating meaningful connections with your audience through digital-first storytelling.",
+        image: webServicesButton2 ,
       },
       {
         keys: "Shift + 3",
         label: "Microsites",
         title: "Microsites",
-        description: "Mini-websites tailored for specific goals or events.",
-        image: "https://example.com/microsites.jpg",
+        description: "Immerse your audience in campaign experiences that push creative boundaries, transforming brand touch points into interactive journeys that users want to explore and share.",
+        image: webServicesButton3 ,
       },
     ],
   },
