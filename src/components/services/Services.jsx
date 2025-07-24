@@ -7,9 +7,10 @@ import React, { useEffect, useState } from "react";
 const Services = ({ selected }) => {
 
   const [currentService, setCurrentService] = useState(servicesData[selected])
+  
   const [currentContent, setCurrentContent] = useState({
     title: currentService.title,
-    description: currentService.description,
+    description: currentService.description, 
     image: currentService.image
   })
 
@@ -38,9 +39,6 @@ const Services = ({ selected }) => {
   });
 
   }, [selected])
-
-
-  console.log(servicesData[selected], "servicesData[selected]")
 
   return (
     <div className="frame-outer relative h-full w-full max-w-[calc(100vw-2rem)] shadow-xl shadow-stone-500/5 md:max-w-[450px] 2xl:max-w-[1100px] rounded-4xl">
