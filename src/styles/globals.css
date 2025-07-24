@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
 
 @font-face {
   font-family: 'Aspekta';
@@ -22,12 +24,6 @@
 }
 
 
-.swiper-wrapper {
-    position: relative;
-    left: 150px;
-    width: 100%;
-}
-
 body {
   font-family: 'Aspekta', sans-serif;
 }
@@ -40,4 +36,9 @@ body {
 
 *::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+.swiper-pagination-bullet {
+  background-color: grey !important; /* or gray */
+  opacity: 1;
 }
