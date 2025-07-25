@@ -1,3 +1,5 @@
+"use client"
+
 import { services } from '@/data/servicesSelectorData'
 import React from 'react'
 import { motion } from 'framer-motion'
