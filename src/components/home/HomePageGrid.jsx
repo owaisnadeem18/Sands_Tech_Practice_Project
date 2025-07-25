@@ -6,7 +6,7 @@ const GridGallery = () => {
   return (
     <div className="grid-wrapper flex w-full items-center bg-red-600  pl-[284px] pb-19">
       <div
-        className="relative grid border border-red-900"
+        className="relative grid border"
         style={{
           gridTemplateColumns: 'repeat(7, clamp(150px, 20vw, 180px))',
           gridTemplateRows: 'repeat(3, clamp(150px, 20vw, 180px))',
