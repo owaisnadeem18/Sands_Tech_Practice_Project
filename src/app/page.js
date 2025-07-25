@@ -1,5 +1,4 @@
 import About from "@/components/home/About";
-import GridHome from "@/components/home/GridHome";
 import HeroSection from "@/components/home/HeroSection";
 import HeroSlider from "@/components/home/HeroSlider";
 import HomeGridGallery from "@/components/home/HomeGridGallery";
