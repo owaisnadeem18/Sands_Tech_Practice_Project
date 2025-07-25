@@ -5,7 +5,16 @@ import heroImg from '@/assets/images/dropBoxImg.webp'
 
 const GridGallery = () => {
   return (
-    <div className="w-full overflow-x-auto md:overflow-x-auto pb-20 pl-4">
+    <div className="w-full pt-20 overflow-x-auto md:overflow-x-auto pb-20 pl-4">
+        <div className="max-w-[16ch] pb-5 m-auto text-center text-3xl font-[450] text-neutral-700/50 lg:text-3xl 2xl:text-4xl">
+  <span
+    className="inline-block"
+    style={{ filter: "blur(0px)", transform: "translateY(0px)", opacity: 1, willChange: "auto" }}
+  >
+    A design and technology studio.
+  </span>
+</div>
+
       <div
         className="relative inline-grid"
         style={{
@@ -20,7 +29,11 @@ const GridGallery = () => {
           <GalleryCard
             type="video"
             src="https://stream.mux.com/OnemXGNOXH7wLlm8ql2aJ8TxPbKyN8QN6NBNsoi1oCk/high.mp4"
-            poster="https://image.mux.com/OnemXGNOXH7wLlm8ql2aJ8TxPbKyN8QN6NBNsoi1oCk/thumbnail.jpg"
+            poster="https://image.mux.com/OnemXGNOXH7wLlm8ql2aJ8TxPbKyN8
+            
+            
+            
+            QN6NBNsoi1oCk/thumbnail.jpg"
             label="Adaline"
             date="Preview"
           />

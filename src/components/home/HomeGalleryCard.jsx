@@ -6,7 +6,7 @@ const GalleryCard = ({ type, src, poster, label, date, href, isLink = false }) =
   const Wrapper = isLink ? 'a' : 'div'
 
   return (
-    <div className="frame-outer group relative flex h-full w-full overflow-hidden border border-orange-300/10 shadow-lg shadow-orange-300/5 transition-all hover:border-orange-300/20 hover:shadow-orange-300/10 rounded-4xl">
+    <div className="frame-outer group relative m-auto flex h-full w-full overflow-hidden border border-orange-300/10 shadow-lg shadow-orange-300/5 transition-all hover:border-orange-300/20 hover:shadow-orange-300/10 rounded-4xl">
       <div className="frame-inner relative h-full w-full overflow-hidden">
         <Wrapper
           {...(isLink && { href, target: '_blank', rel: 'noopener noreferrer' })}

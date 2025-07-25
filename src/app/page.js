@@ -8,7 +8,7 @@ import Newsfeed from "@/components/home/Newsfeed";
 export default function Home() {
   return (
     <>
-      <div className="w-full h-[92dvh] sticky bg-[linear-gradient(0deg,_#fff5e6,_#fff0eb_25%,_#faebf5_50%,_#f5f0ff_75%,_#fafaff)] top-0">
+      <div className="w-full h-[92dvh] sticky bg-[linear-gradient(0deg,_#fff5e6,_#fff0eb_25%,_#faebf5_50%,_#f5f0ff_75%,_#fafaff)] top-10">
         <HomeGridGallery />
       </div>
 

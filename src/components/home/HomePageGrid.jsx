@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const GridGallery = () => {
   return (
-    <div className="grid-wrapper flex w-full items-center pl-[284px] pb-19">
+    <div className="grid-wrapper flex w-full items-center bg-red-600  pl-[284px] pb-19">
       <div
-        className="relative grid "
+        className="relative grid border border-red-900"
         style={{
           gridTemplateColumns: 'repeat(7, clamp(150px, 20vw, 180px))',
           gridTemplateRows: 'repeat(3, clamp(150px, 20vw, 180px))',
