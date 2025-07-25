@@ -3,7 +3,7 @@ import GridGallery from './HomePageGrid'
 
 const GridHome = () => {
     return (
-        <div className="h-[92vh] bg-[linear-gradient(0deg,_#fff5e6,_#fff0eb_25%,_#faebf5_50%,_#f5f0ff_75%,_#fafaff)]  w-full  text-white">
+        <div className="h-[97vh] bg-[linear-gradient(0deg,_#fff5e6,_#fff0eb_25%,_#faebf5_50%,_#f5f0ff_75%,_#fafaff)]  w-full  text-white">
 
             <div className="h-[92vh] flex flex-col justify-center items-center">
                 <div className="max-w-[16ch] text-center text-3xl font-[450] text-neutral-700/50  lg:text-3xl 2xl:text-4xl mt-34 mb-4">

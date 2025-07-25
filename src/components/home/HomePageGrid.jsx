@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import heroImg from "@/assets/images/dropBoxImg.webp"
 
 const GridGallery = () => {
   return (
@@ -17,7 +16,7 @@ const GridGallery = () => {
       >
         {/* Adaline Main Video */}
         <div style={{ gridArea: '1 / 3 / span 3 / span 3' }}>
-          <div className="frame-outer group relative flex h-full w-full overflow-hidden border rounded-4xl border-orange-300/10 shadow-lg shadow-orange-300/5 transition-colors duration-500 ease-in-out hover:border-orange-300/20 hover:shadow-sm hover:shadow-orange-300/5">
+          <div className="frame-outer group relative flex w-full overflow-hidden border rounded-4xl border-orange-300/10 shadow-lg shadow-orange-300/5 transition-colors duration-500 ease-in-out hover:border-orange-300/20 hover:shadow-sm hover:shadow-orange-300/5">
             <div className="frame-inner relative w-full overflow-hidden">
               <div className="group cursor-pointer">
                 <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/30 to-black/0 transition-opacity duration-300 group-hover:opacity-0"></div>
@@ -121,7 +120,7 @@ const GridGallery = () => {
                   <div className="relative h-full w-full focus:outline-none focus:ring-0">
                     <Image
                   alt="Superpower"
-                  src= {heroImg}
+                  src= "/images/brand.webp"
                   fill
                   className="object-cover focus:outline-none focus:ring-0"
                   sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1920px) 1920px, 2560px"

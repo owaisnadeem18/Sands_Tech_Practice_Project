@@ -2,16 +2,17 @@ import About from "@/components/home/About";
 import GridHome from "@/components/home/GridHome";
 import HeroSection from "@/components/home/HeroSection";
 import HeroSlider from "@/components/home/HeroSlider";
+import HomeGridGallery from "@/components/home/HomeGridGallery";
 import Newsfeed from "@/components/home/Newsfeed";
 
 export default function Home() {
   return (
     <>
-      <div className="w-full h-full sticky  top-0 ">
-        <GridHome />
+      <div className="w-full h-[92dvh] sticky bg-[linear-gradient(0deg,_#fff5e6,_#fff0eb_25%,_#faebf5_50%,_#f5f0ff_75%,_#fafaff)] top-0">
+        <HomeGridGallery />
       </div>
 
-      <div className="w-full h-full relative z-[60] bg-white">
+      <div className="w-full rounded-r-4xl rounded-l-4xl relative z-[60] bg-white top-0">
         <HeroSection />
         <HeroSlider />
         <About />

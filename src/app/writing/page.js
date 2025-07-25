@@ -1,16 +1,15 @@
-import WritingBox from '@/components/writing/WritingBox'
-import WritingHeadingSection from '@/components/writing/WritingHeadingSection'
-import React from 'react'
+import React from "react";
+
+import WritingHeadingSection from "@/components/writing/WritingHeadingSection";
+import WritingBox from "@/components/writing/WritingBox";
 
 const Index = () => {
   return (
-    <div className='min-h-screen' >
-
-        <WritingHeadingSection/>
-        <WritingBox/>
-
+    <div className="min-h-screen">
+      <WritingHeadingSection />
+      <WritingBox />
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

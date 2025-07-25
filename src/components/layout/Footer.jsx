@@ -8,7 +8,7 @@ const Footer = () => {
 
   const path = usePathname() 
 
-  const hideOnRoutes = ["/about"]
+  const hideOnRoutes = ["/about" , "/contact" ]
 
   if (hideOnRoutes.includes(path)) return null
 

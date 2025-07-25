@@ -1,10 +1,9 @@
+import ContactForms from '@/components/contact/ContactForms'
 import React from 'react'
 
 const Index = () => {
   return (
-    <div className='min-h-screen' >
-
-    </div>
+      <ContactForms/>
   )
 }
 
