@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { peopleData } from "@/data/teamData"; // Assuming this path is correct
 
 import "swiper/css";

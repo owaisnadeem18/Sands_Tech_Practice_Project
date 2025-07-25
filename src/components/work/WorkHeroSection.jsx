@@ -4,7 +4,7 @@
 import Image from 'next/image'; // For Next.js optimized images
 import WorkProjectCards from '../general/WorkProjectCards';
 import { workProjectsData } from '@/data/workProjectsData';
-import { motion } from 'framer-motion'; // ✅ Don't forget to import this!
+import { motion } from 'framer-motion'; 
 
 const row1Projects = [workProjectsData[0], workProjectsData[1], workProjectsData[2]];
 const row2projects = [workProjectsData[3], workProjectsData[4]];
