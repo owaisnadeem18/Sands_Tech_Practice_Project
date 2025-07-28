@@ -5,6 +5,7 @@ import Image from 'next/image'; // For Next.js optimized images
 import WorkProjectCards from '../general/WorkProjectCards';
 import { workProjectsData } from '@/data/workProjectsData';
 import { motion } from 'framer-motion'; 
+import Link from 'next/link';
 
 const row1Projects = [workProjectsData[0], workProjectsData[1], workProjectsData[2]];
 const row2projects = [workProjectsData[3], workProjectsData[4]];
@@ -25,35 +26,46 @@ const WorkHeroSection = () => {
           {/* Row 1 */}
           <div className="flex w-full justify-center gap-[clamp(12px,2vw,16px)] items-end">
             {row1Projects.map((data, index) => (
-              <WorkProjectCards key={index} {...data} />
+              <Link key={index} href={`/work/${data.slug}`} >
+                <WorkProjectCards {...data} />
+              </Link>
             ))}
           </div>
 
           {/* Row 2 */}
           <div className="flex w-full justify-center gap-[clamp(12px,2vw,16px)] items-center">
             {row2projects.map((data, index) => (
-              <WorkProjectCards key={index} {...data} />
+              <Link key={index} href={`/work/${data.slug}`}>
+                <WorkProjectCards {...data} />
+              </Link>
             ))}
           </div>
 
           {/* Row 3 */}
           <div className="flex w-full justify-center gap-[clamp(12px,2vw,16px)] items-center">
             {row3projects.map((data, index) => (
-              <WorkProjectCards key={index} {...data} />
+              <Link key={index} href={`/work/${data.slug}`} >
+                <WorkProjectCards {...data} />
+              </Link>
+            
             ))}
           </div>
 
           {/* Row 4 */}
           <div className="flex w-full justify-center gap-[clamp(12px,2vw,16px)] items-center">
             {row4projects.map((data, index) => (
-              <WorkProjectCards key={index} {...data} />
+              <Link href={`/work/${data.slug}`} key={index} >
+              <WorkProjectCards {...data} />
+              </Link>
             ))}
           </div>
 
           {/* Row 5 */}
           <div className="flex w-full justify-center gap-[clamp(12px,2vw,16px)] items-start">
             {row5projects.map((data, index) => (
-              <WorkProjectCards key={index} {...data} />
+              <Link href={`/work/${data.slug}`} key={index} >
+              <WorkProjectCards {...data} />
+              </Link>
             ))}
           </div>
         </div>

@@ -1,6 +1,7 @@
 export const workProjectsData = [
   {
     title: 'Dropbox x McLaren F1',
+    slug: "dropbox-x-mclaren-f1",
     category: 'Web',
     videoSrc: 'https://stream.mux.com/dNm2qFVLwWOucrss01eGH2hllGY8tQ6OFouzmAg3Bv2o/high.mp4',
     posterSrc: 'https://image.mux.com/dNm2qFVLwWOucrss01eGH2hllGY8tQ6OFouzmAg3Bv2o/thumbnail.jpg',
@@ -10,6 +11,7 @@ export const workProjectsData = [
   },
   {
     title: 'Adaline',
+    slug: "adaline" ,
     category: 'Brand, Web',
     imageSrc: 'https://cdn.sanity.io/images/oxbtrss9/production/4a4e8f6024279d60f3b9aba529d187c2c181cd6a-7112x5092.png?q=100&fit=max&auto=format',
     imageWidth: 7112,
@@ -20,6 +22,7 @@ export const workProjectsData = [
   },
   {
     title: 'Superpower',
+    slug: "superpower" ,
     category: 'Brand, Product, Web',
     imageSrc: 'https://cdn.sanity.io/images/oxbtrss9/production/ed34ed32820178628b4c72cc5b0ee0ec2e67c64d-3360x1891.webp?q=100&fit=max&auto=format',
     imageWidth: 3360,
@@ -30,6 +33,7 @@ export const workProjectsData = [
   },
   {
     title: 'Dropbox',
+    slug: "dropbox" ,
     category: 'Brand',
     videoSrc: 'https://stream.mux.com/01cEjb4KT7loGeMCdScL8E9uR54BBbKTIWWXoOSrhNgk/high.mp4',
     posterSrc: 'https://image.mux.com/01cEjb4KT7loGeMCdScL8E9uR54BBbKTIWWXoOSrhNgk/thumbnail.jpg',
@@ -39,6 +43,7 @@ export const workProjectsData = [
   },
   {
     title: 'Adidas x Crypto the Game',
+    slug: "adidas-ctg" ,
     category: 'Brand',
     videoSrc: 'https://stream.mux.com/7702sO36Citl31Kb1eGzGf7iEAa6jOkU3oKTq5hHEezg/high.mp4',
     posterSrc: 'https://image.mux.com/7702sO36Citl31Kb1eGzGf7iEAa6jOkU3oKTq5hHEezg/thumbnail.jpg',
@@ -48,6 +53,7 @@ export const workProjectsData = [
   },
   {
     title: 'Uniswap',
+    slug: "uniswap" ,
     category: 'Brand',
     videoSrc: 'https://stream.mux.com/J5P00PGPEPQ6Y5OHptJpxbymrIfQe9xeLoOJZIKntq01E/high.mp4',
     posterSrc: 'https://image.mux.com/J5P00PGPEPQ6Y5OHptJpxbymrIfQe9xeLoOJZIKntq01E/thumbnail.jpg',
@@ -57,6 +63,7 @@ export const workProjectsData = [
   },
   {
     title: 'Dippy',
+    slug: "dippy" ,
     category: 'Product',
     videoSrc: 'https://stream.mux.com/14npOKIbnDomMSgdNtzdxAiZbo8ZMkWXG1yLCALva2c/high.mp4',
     posterSrc: 'https://image.mux.com/14npOKIbnDomMSgdNtzdxAiZbo8ZMkWXG1yLCALva2c/thumbnail.jpg',
@@ -66,6 +73,7 @@ export const workProjectsData = [
   },
     {
     title: 'Country Club',
+    slug: "country-club" ,
     category: 'Brand',
     imageSrc: 'https://cdn.sanity.io/images/oxbtrss9/production/3198281814be348b60647f09bf75d40cb5ce64fc-2160x2160.png?q=100&fit=max&auto=format',
     imageWidth: 2160,
@@ -77,6 +85,7 @@ export const workProjectsData = [
 
    {
     title: 'Workmade DTF',
+    slug: "workmade-dtf" ,
     category: 'Web',
     videoSrc: 'https://stream.mux.com/00je8402GKsuW8cefF4EXYUq5x8vTVejas02Kpypz7h02Sk/high.mp4',
     posterSrc: 'https://image.mux.com/00je8402GKsuW8cefF4EXYUq5x8vTVejas02Kpypz7h02Sk/thumbnail.jpg',
@@ -86,6 +95,7 @@ export const workProjectsData = [
   },
   {
     title: 'Pursuit',
+    slug: "pursuit" ,
     category: 'Brand',
     videoSrc: 'https://stream.mux.com/Nn1IVm1Ukz1R2PvGYkdRW01ZIC1ErilUMB2KrKo3jb02c/high.mp4',
     posterSrc: 'https://image.mux.com/Nn1IVm1Ukz1R2PvGYkdRW01ZIC1ErilUMB2KrKo3jb02c/thumbnail.jpg',
@@ -96,6 +106,7 @@ export const workProjectsData = [
 
   {
     title: 'Impel',
+    slug: "impel" ,
     category: 'Product',
     videoSrc: 'https://stream.mux.com/5HwvU01a6eA01D3C57MXLzr0002uwYIQhqn2evE9FlwgZNw/high.mp4',
     posterSrc: 'https://image.mux.com/5HwvU01a6eA01D3C57MXLzr0002uwYIQhqn2evE9FlwgZNw/thumbnail.jpg',
