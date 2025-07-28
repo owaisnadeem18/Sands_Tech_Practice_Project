@@ -10,7 +10,7 @@ const Link = ({ href, children, className, target, rel, tabIndex, style, onClick
 const ImageSequence = () => {
   return (
     <main className="relative z-[100] h-full w-full">
-      {/* Fixed Image Section */}
+
       <div className=" fixed inset-0 w-full" style={{ transform: 'none', transformOrigin: '50% 50% 0px' }}>
         <div className="fixed inset-0 z-[80] p-2" style={{ transform: 'none', transformOrigin: '50% 50% 0px' }}>
           <div className="h-full w-full" style={{ '--image-position': '50% -15vh', willChange: 'auto' }}>
@@ -20,7 +20,7 @@ const ImageSequence = () => {
               width={1920}
               height={1080}
               decoding="async"
-              // data-nimg="1" // Removed: Next.js Image specific prop
+
               className="rounded-4xl frame-inner relative z-[90] h-full w-full object-cover"
               src="/images/hero-writing-img-section.webp" // Path relative to your public directory
               style={{ objectPosition: 'var(--image-position, 50% 0vh)' }}

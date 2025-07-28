@@ -9,16 +9,21 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showMobileHeader, setShowMobileHeader] = useState(false); // State to control mobile menu visibility
+  const [hideHeader, setHideHeader]= useState(true)
 
-  const hideHeaderArr = ["/writing/image-sequence"]
+  const hideHeaderArr = ["/writing/image-sequence" , "" ]
 
   let pathName = usePathname();  
 
-  const hideHeader = hideHeaderArr.includes(pathName)
+  console.log(pathName)
 
-  if (hideHeaderArr) {
-    return null
-  }
+  
+  useEffect(()=>{
+    const hideHead = hideHeaderArr.includes(pathName)
+    setHideHeader(hideHead)
+  },[pathName])
+
+
 
   const currentPathSegment = pathName.split("/")[1] || "";
 
@@ -145,6 +150,12 @@ const Header = () => {
   ];
 
   return (
+    <>
+    {
+      hideHeader ?
+      <></>
+      :
+
     <>
       {/* Desktop Header Navigation */}
       <nav
@@ -299,6 +310,8 @@ const Header = () => {
           </div>
         </div>
       )}
+    </>
+    }
     </>
   );
 };

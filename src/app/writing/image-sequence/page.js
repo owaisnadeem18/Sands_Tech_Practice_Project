@@ -1,3 +1,5 @@
+"use client"
+
 import ImageSequence from '@/components/writing/image-sequence/ImageSequence'
 import React from 'react'
 
