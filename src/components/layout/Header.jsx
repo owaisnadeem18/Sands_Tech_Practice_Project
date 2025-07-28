@@ -1,39 +1,25 @@
 "use client"
-
-// In a standard Next.js environment, you would import Link and usePathname like this:
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
 import React, { useEffect, useState } from 'react'
-
-// Assuming your new icon files are in a 'general' subfolder within 'components'
-// Adjust the paths based on your actual file locations relative to Header.jsx
-
 import HamburgerCloseIcon from '../general/HamburgerCloseIcon.jsx'
 import HamburgerOpenIcon from '../general/HamburgerOpenIcon.jsx'
-
-// Mock Link component for Canvas preview (REMOVE FOR ACTUAL NEXT.JS PROJECT)
-// const Link = ({ href, children, className, target, rel, onClick }) => (
-//   <a href={href} className={className} target={target} rel={rel} onClick={onClick}>
-//     {children}
-//   </a>
-// );
-
-// Mock usePathname hook for Canvas preview (REMOVE FOR ACTUAL NEXT.JS PROJECT)
-// const usePathname = () => {
-//   // You can change this value to '/services', '/work', etc., to see other active states in Canvas.
-//   return "/"; // For the purpose of this preview, we'll assume the home path is active.
-// };
-
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showMobileHeader, setShowMobileHeader] = useState(false); // State to control mobile menu visibility
 
-  let pathName = usePathname();
+  const hideHeaderArr = ["/writing/image-sequence"]
 
-  // Ensure pathName[1] is lowercase for comparison, handle root path
+  let pathName = usePathname();  
+
+  const hideHeader = hideHeaderArr.includes(pathName)
+
+  if (hideHeaderArr) {
+    return null
+  }
+
   const currentPathSegment = pathName.split("/")[1] || "";
 
   useEffect(() => {

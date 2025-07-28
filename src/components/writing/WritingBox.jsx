@@ -1,10 +1,14 @@
 "use client";
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 const WritingBox = () => {
+
+  const route = useRouter()
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -13,14 +17,14 @@ const WritingBox = () => {
       viewport={{ once: true }}
       className="relative flex w-full pt-32 pb-20 md:pb-56"
     >
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 ">
         <div className="flex w-full flex-col items-center justify-center gap-6 md:flex-wrap md:justify-center">
           <motion.div
             whileHover={{ scale: 0.99 }}
             transition={{ duration: 0.3 }}
             className="mx-auto flex w-full items-center justify-center"
           >
-            <div className="rounded-r-4xl bg-white rounded-l-4xl frame-outer group relative flex h-full w-full max-w-[400px] overflow-hidden border-2 p-1 hover:scale-[.99] border-orange-300/10 shadow-lg shadow-orange-300/5 transition-all duration-500 ease-in-out hover:border-orange-300/20 hover:shadow-sm hover:shadow-orange-300/5">
+            <div onClick={ () => route.push("/writing/image-sequence") } className="rounded-r-4xl bg-white rounded-l-4xl frame-outer group relative flex h-full w-full max-w-[400px] overflow-hidden border-2 p-1 hover:scale-[.99] border-orange-300/10 shadow-lg shadow-orange-300/5 transition-all duration-500 ease-in-out hover:border-orange-300/20 hover:shadow-sm hover:shadow-orange-300/5">
 
               {/* Image Section */}
               <div className="frame-inner relative h-[500px] w-full origin-center cursor-pointer overflow-hidden">
@@ -66,6 +70,7 @@ const WritingBox = () => {
           </motion.div>
         </div>
       </div>
+
     </motion.div>
   );
 }
