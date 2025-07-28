@@ -9,7 +9,7 @@ const ServicesSelector = ({ selected, setSelected }) => {
 
   return (
       <div className="basis-[24%] shrink-0 grow-0 frame-outer mt-4 flex w-fit items-stretch justify-start  px-10 2xl:shadow-2xl 2xl:shadow-stone-500/15 2xl:backdrop-blur-3xl rounded-4xl">
-        <nav className="frame-inner rounded-4xl bg-white relative grid grid-cols-4 backdrop-blur-2xl 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-2 2xl:p-2">
+        <nav className="frame-inner rounded-4xl md:bg-white relative grid grid-cols-4 backdrop-blur-2xl 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-2 2xl:p-2">
           {services.map((item, index) => (
             <motion.button
               onClick={() => setSelected(item.key)}

@@ -41,7 +41,7 @@ const Services = ({ selected }) => {
   }, [selected])
 
   return (
-    <div className="frame-outer min-h-[648px] md:max-w-[1100px] relative h-full w-full shadow-xl shadow-stone-500/5 rounded-4xl">
+    <div className="frame-outer min-h-[648px] md:max-w-[450px] 2xl:max-w-[1100px] relative h-full w-full shadow-xl shadow-stone-500/5 rounded-4xl">
       <div className="frame-inner min-h-[648px] bg-white backdrop-blur-2xl rounded-4xl">
         <section className="relative flex h-full w-full flex-col 2xl:flex-row rounded-4xl">
           {/* Image Section */}
@@ -94,7 +94,7 @@ const Services = ({ selected }) => {
         whileTap={{ scale: 0.97 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         onClick={() => buttonHanlder(item)}
-        className={`frame-inner cursor-pointer hidden h-32 w-32 items-center justify-center overflow-hidden rounded-4xl border border-neutral-200/80 p-4 font-[450] focus:outline-none transition duration-300 ease-in-out 2xl:flex ${
+        className={`frame-inner cursor-pointer h-32 w-32 items-center justify-center overflow-hidden rounded-4xl border border-neutral-200/80 p-4 font-[450] focus:outline-none transition duration-300 ease-in-out 2xl:flex ${
           item.active
             ? "bg-neutral-50 text-neutral-500"
             : "text-neutral-400/70 hover:text-neutral-500"
