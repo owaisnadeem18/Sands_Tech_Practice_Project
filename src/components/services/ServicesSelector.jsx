@@ -6,11 +6,9 @@ import { motion } from 'framer-motion'
 
 const ServicesSelector = ({ selected, setSelected }) => {
 
-    console.log(selected)
 
   return (
-    <div>
-      <div className="frame-outer mt-4 flex w-fit items-stretch justify-center p-1 2xl:absolute 2xl:left-8 2xl:border-[1px] 2xl:border-stone-300/25 2xl:shadow-2xl 2xl:shadow-stone-500/15 2xl:backdrop-blur-3xl rounded-4xl">
+      <div className="basis-[24%] shrink-0 grow-0 frame-outer mt-4 flex w-fit items-stretch justify-start  px-10 2xl:shadow-2xl 2xl:shadow-stone-500/15 2xl:backdrop-blur-3xl rounded-4xl">
         <nav className="frame-inner rounded-4xl bg-white relative grid grid-cols-4 backdrop-blur-2xl 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-2 2xl:p-2">
           {services.map((item, index) => (
             <motion.button
@@ -41,7 +39,6 @@ const ServicesSelector = ({ selected, setSelected }) => {
           ))}
         </nav>
       </div>
-    </div>
   )
 }
 

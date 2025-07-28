@@ -41,8 +41,8 @@ const Services = ({ selected }) => {
   }, [selected])
 
   return (
-    <div className="frame-outer relative h-full w-full max-w-[calc(100vw-2rem)] shadow-xl shadow-stone-500/5 md:max-w-[450px] 2xl:max-w-[1100px] rounded-4xl">
-      <div className="frame-inner h-full bg-white backdrop-blur-2xl rounded-4xl">
+    <div className="frame-outer min-h-[648px] md:max-w-[1100px] relative h-full w-full shadow-xl shadow-stone-500/5 rounded-4xl">
+      <div className="frame-inner min-h-[648px] bg-white backdrop-blur-2xl rounded-4xl">
         <section className="relative flex h-full w-full flex-col 2xl:flex-row rounded-4xl">
           {/* Image Section */}
           <motion.div
