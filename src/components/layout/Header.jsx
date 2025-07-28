@@ -65,34 +65,97 @@ const Header = () => {
     };
   }, [showMobileHeader]);
 
-  // Define mobile menu items with their paths and labels
+  // Define mobile menu items with their paths, labels, and grid layout classes
   const mobileMenuItems = [
-    { label: 'Home', path: '/', icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-home w-6 h-6 mb-2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      ) },
-    { label: 'About', path: '/about', icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user w-6 h-6 mb-2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-      ) },
-    { label: 'Services', path: '/services', icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-briefcase w-6 h-6 mb-2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-      ) },
-    { label: 'Work', path: '/work', icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-folder w-6 h-6 mb-2"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L.37 5.12A2 2 0 0 0 2 2h3.93a2 2 0 0 1 1.66.9l.82 1.2A2 2 0 0 0 10 5h10a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2Z"></path></svg>
-      ) },
-    { label: 'Writing', path: '/writing', icon: (
+    {
+      label: 'Home',
+      path: '/',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-full w-full">
+          <path fillRule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clipRule="evenodd"></path>
+        </svg>
+      ),
+      iconSize: 'h-10 w-10', // Specific size from inspect code
+      gridClasses: 'col-span-2 row-span-2',
+    },
+    {
+      label: 'About',
+      path: '/about',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-full w-full">
+          <path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z"></path>
+        </svg>
+      ),
+      iconSize: 'h-7 w-7', // Specific size from inspect code
+      gridClasses: 'col-span-1 col-start-3 row-span-2',
+      // If you need the video background for About, you'd add a 'videoSrc' property here
+      // videoSrc: '/videos/gradient-orange.mp4',
+    },
+    {
+      label: 'Services',
+      path: '/services',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-full w-full">
+          <path fillRule="evenodd" d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z" clipRule="evenodd"></path>
+        </svg>
+      ),
+      iconSize: 'h-7 w-7', // Specific size from inspect code
+      gridClasses: 'col-span-1 col-start-3 row-span-2', // This item is below About, so it needs to be in the same column
+    },
+    {
+      label: 'Instagram',
+      path: 'https://instagram.com',
+      external: true,
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="h-full w-full" preserveAspectRatio="xMidYMid meet">
+          <g clipPath="url(#instagram_svg__a)"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849s-.012 3.584-.069 4.849c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849s.012-3.583.07-4.849c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0m0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881"></path></g><defs><clipPath id="instagram_svg__a"><path d="M0 0h24v24H0z"></path></clipPath></defs></svg>
+      ),
+      iconSize: 'h-7 w-7', // Specific size from inspect code
+      gridClasses: 'col-span-1 row-span-2 col-start-1 row-start-3',
+    },
+    {
+      label: 'X',
+      path: 'https://x.com',
+      external: true,
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="h-full w-full" preserveAspectRatio="xMidYMid meet">
+          <g clipPath="url(#x_svg__a)"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932zm-1.291 19.49h2.039L6.486 3.24H4.298z"></path></g><defs><clipPath id="x_svg__a"><path d="M0 0h24v24H0z"></path></clipPath></defs></svg>
+      ),
+      iconSize: 'h-7 w-7', // Specific size from inspect code
+      gridClasses: 'col-span-1 row-span-2 col-start-1 row-start-3', // This item is below Instagram
+    },
+    {
+      label: 'Work',
+      path: '/work',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-full w-full">
+          <path d="M3.75 3A1.75 1.75 0 0 0 2 4.75v3.26a3.235 3.235 0 0 1 1.75-.51h12.5c.644 0 1.245.188 1.75.51V6.75A1.75 1.75 0 0 0 16.25 5h-4.836a.25.25 0 0 1-.177-.073L9.823 3.513A1.75 1.75 0 0 0 8.586 3H3.75ZM3.75 9A1.75 1.75 0 0 0 2 10.75v4.5c0 .966.784 1.75 1.75 1.75h12.5A1.75 1.75 0 0 0 18 15.25v-4.5A1.75 1.75 0 0 0 16.25 9H3.75Z"></path>
+        </svg>
+      ),
+      iconSize: 'h-10 w-10', // Specific size from inspect code
+      gridClasses: 'col-span-2 row-span-2 col-start-2 row-start-3',
+    },
+    // Writing and Contact are not explicitly in the mobile grid screenshot,
+    // but we'll include them as standard grid items if they should appear.
+    // If they should be separate, like the "Contact Us" button, adjust their rendering.
+    {
+      label: 'Writing',
+      path: '/writing',
+      icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-book-open w-6 h-6 mb-2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-      ) },
-    { label: 'Contact', path: '/contact', icon: (
+      ),
+      iconSize: 'h-7 w-7',
+      gridClasses: 'col-span-1 row-span-1', // Placeholder if it needs to fit somewhere
+    },
+    {
+      label: 'Contact',
+      path: '/contact',
+      icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail w-6 h-6 mb-2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-      ) },
-    // Add Instagram and X (Twitter) links as needed, perhaps with their own custom icons
-    { label: 'Instagram', path: 'https://instagram.com', external: true, icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram w-6 h-6 mb-2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line></svg>
-      ) },
-    { label: 'X', path: 'https://x.com', external: true, icon: (
-        // Use the imported HamburgerCloseIcon for the 'X' link in mobile menu
-        <HamburgerCloseIcon className="w-6 h-6 mb-2 text-neutral-500" />
-      ) },
+      ),
+      iconSize: 'h-7 w-7',
+      gridClasses: 'col-span-1 row-span-1', // Placeholder if it needs to fit somewhere
+    },
   ];
 
   return (
@@ -190,7 +253,7 @@ const Header = () => {
 
       {/* Mobile Header Overlay */}
       {showMobileHeader && (
-        <div className="fixed inset-0 z-[60] bg-white bg-opacity-95 backdrop-blur-xl flex flex-col items-center justify-center p-4 transition-opacity duration-300 ease-in-out">
+        <div className="fixed inset-0 z-[100] bg-white bg-opacity-95 backdrop-blur-xl flex flex-col items-center justify-center p-1 transition-opacity duration-300 ease-in-out">
           {/* Close Button */}
           <HamburgerCloseIcon
             onClick={() => setShowMobileHeader(false)}
@@ -198,41 +261,56 @@ const Header = () => {
           />
 
           {/* Mobile Menu Grid */}
-          <div className="grid grid-cols-2 gap-4 max-w-lg w-full">
-            {mobileMenuItems.map((item) => {
-              // For Canvas preview, we'll manually set 'Home' as active if path is '/'
-              // In your Next.js app, currentPathSegment would be dynamic.
-              const isActive = (item.path === '/' && currentPathSegment === "") ||
-                               (item.path !== '/' && currentPathSegment === item.path.substring(1));
-              return (
-                <Link
-                  key={item.label}
-                  href={item.path}
-                  target={item.external ? '_blank' : '_self'} // Open external links in new tab
-                  rel={item.external ? 'noopener noreferrer' : ''}
-                  className={`
-                    flex flex-col items-center justify-center p-4 rounded-3xl text-center
-                    bg-neutral-50 border-[1px] border-neutral-300/25 shadow-lg shadow-neutral-500/5
-                    hover:bg-gray-100 transition-colors duration-200
-                    ${isActive ? "bg-gray-100 border-neutral-600/5 shadow-lg shadow-neutral-500/15" : ""}
-                  `}
-                  onClick={() => setShowMobileHeader(false)} // Close menu on item click
-                >
-                  {item.icon}
-                  <span className="text-sm font-medium text-neutral-700">{item.label}</span>
-                </Link>
-              );
-            })}
-          </div>
+          <div className="container relative flex h-full w-full max-w-lg flex-col items-center justify-center px-8">
+            <div className="grid w-full auto-rows-fr grid-cols-3 gap-4" style={{ opacity: 1, willChange: "auto" }}>
+              {mobileMenuItems.map((item) => {
+                const isActive = (item.path === '/' && currentPathSegment === "") ||
+                                 (item.path !== '/' && currentPathSegment === item.path.substring(1));
 
-          {/* Contact Us Button - Example, adjust as needed */}
-          <Link
-            href="/contact"
-            className="mt-8 px-6 py-3 bg-neutral-50 border-[1px] border-neutral-300/25 rounded-full shadow-lg shadow-neutral-500/5 text-neutral-700 font-medium hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setShowMobileHeader(false)}
-          >
-            Contact Us
-          </Link>
+                return (
+                  <div
+                    key={item.label}
+                    className={`frame-outer relative aspect-square overflow-hidden ${item.gridClasses}`}
+                    style={{ opacity: 1, filter: "blur(0px)", willChange: "auto", transform: "none" }}
+                  >
+                    <Link
+                      href={item.path}
+                      target={item.external ? '_blank' : '_self'}
+                      rel={item.external ? 'noopener noreferrer' : ''}
+                      className="relative block h-full w-full focus:outline-none"
+                      onClick={() => setShowMobileHeader(false)}
+                    >
+                      {/* Conditional video background for 'About' if needed */}
+                      {/* {item.videoSrc && (
+                        <video src={item.videoSrc} autoPlay playsInline loop className="frame-inner absolute inset-0 h-full w-full object-cover"></video>
+                      )} */}
+                      <div className={`
+                          frame-inner relative z-20 flex h-full w-full flex-col items-center justify-center space-y-2
+                          bg-white/25 shadow-inner shadow-white/75
+                          ${isActive ? "bg-white/50" : ""}
+                        `}>
+                        <div className={`flex items-center justify-center text-neutral-600/75 ${item.iconSize}`}>
+                          {item.icon}
+                        </div>
+                        <span className="text-md font-medium text-neutral-600/75">{item.label}</span>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Contact Us Button */}
+            <div className="pt-12 text-center" style={{ opacity: 1, willChange: "auto", transform: "none" }}>
+              <Link
+                href="/contact"
+                className="frame-outer rounded-full bg-white/80 px-6 py-4 text-center font-medium text-neutral-500"
+                onClick={() => setShowMobileHeader(false)}
+              >
+                <span className="relative">Contact Us</span>
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </>
