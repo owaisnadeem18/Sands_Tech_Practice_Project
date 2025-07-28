@@ -23,8 +23,8 @@ const options = [
 const ContactForm3 = ({onNext , onBack , totalSteps , step}) => {
 
   return (
-    <div className=" flex justify-center z-20 rounded-4xl bg-pink-50 p-1" style={{ pointerEvents: 'auto' }}>
-      <div className="frame-inner rounded-4xl flex w-[90vw] m-auto flex-col bg-neutral-50 border border-white/50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] p-8 sm:w-[32rem] md:p-10">
+    <div className=" flex justify-center w-[fit] z-20 rounded-4xl bg-pink-50 p-1" style={{ pointerEvents: 'auto' }}>
+      <div className="frame-inner rounded-4xl flex w-[90vw] m-auto flex-col bg-neutral-50 border border-white/50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] p-8 sm:w-[40rem] md:p-10">
         <div className="flex flex-col space-y-6">
           {/* Header */}
           <div className="flex items-center justify-between">
