@@ -5,9 +5,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ContactForm2 = ({ onNext, onBack, step, totalSteps }) => {
   return (
-    <div className="absolute z-10 opacity-100 pointer-events-auto">
+    <div className=" flex justify-center opacity-100 pointer-events-auto">
       <div className="frame-outer p-1 bg-pink-50 rounded-4xl ">
-        <div className="frame-inner rounded-4xl flex w-[90vw] flex-col sm:w-[32rem] bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 md:p-10">
+        <div className="frame-inner rounded-4xl flex w-[90vw] m-auto flex-col sm:w-[32rem] bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 md:p-10">
           {/* Header */}
           <div className="flex w-full flex-col space-y-6">
             <div className="flex items-center justify-between">

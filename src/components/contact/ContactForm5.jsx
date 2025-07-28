@@ -3,7 +3,7 @@ import React from 'react'
 const ContactForm5 = ({onBack , step , totalSteps}) => {
   return (
      <div className="w-[100%] m-auto frame-outer rounded-4xl p-1">
-      <div className="frame-inner flex w-[90vw] flex-col rounded-4xl bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 sm:w-[32rem] md:p-10">
+      <div className="frame-inner flex w-[90vw] m-auto flex-col rounded-4xl bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 sm:w-[32rem] md:p-10">
         
         {/* Header */}
         <div className="flex w-full flex-col space-y-6">

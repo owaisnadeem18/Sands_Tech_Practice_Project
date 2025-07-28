@@ -2,9 +2,9 @@ import React from 'react'
 
 const ContactForm4 = ({onNext , onBack , step , totalSteps}) => {
   return (
-    <div className="absolute z-[3] opacity-100 pointer-events-auto" style={{ filter: "blur(0px)", willChange: "auto", transform: "none" }}>
+    <div className=" flex justify-center z-[3] opacity-100 pointer-events-auto" style={{ filter: "blur(0px)", willChange: "auto", transform: "none" }}>
       <div className="frame-outer p-1 bg-pink-50 rounded-4xl">
-        <div className="frame-inner flex w-[90vw] rounded-4xl flex-col bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 sm:w-[32rem] md:p-10">
+        <div className="frame-inner flex w-[90vw] rounded-4xl m-auto flex-col bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 sm:w-[32rem] md:p-10">
           
           <div className="flex w-full flex-col space-y-6">
             <div className="flex items-center justify-between">

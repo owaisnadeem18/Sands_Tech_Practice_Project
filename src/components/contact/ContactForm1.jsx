@@ -7,7 +7,7 @@ const ContactForm1 = ({ onNext, onBack, step, totalSteps }) => {
   return (
     <div className="w-[100%] flex justify-center m-auto absolute z-0 opacity-100 pointer-events-auto">
       <div className="frame-outer w-[100%] rounded-4xl p-1">
-        <div className="rounded-4xl frame-inner flex w-[90vw] flex-col sm:w-[32rem] bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 md:p-10">
+        <div className="rounded-4xl frame-inner flex w-[90vw] m-auto flex-col sm:w-[32rem] bg-neutral-50 backdrop-blur-3xl shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-white/50 p-8 md:p-10">
           {/* Top Navigation */}
           <div className="flex w-full flex-col space-y-6">
             <div className="flex items-center justify-between">
