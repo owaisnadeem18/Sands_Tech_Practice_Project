@@ -23,7 +23,6 @@
   font-style: normal;
 }
 
-
 body {
   font-family: 'Aspekta', sans-serif;
 }
@@ -60,4 +59,30 @@ body {
 
 .swiper-pagination-bullet-active {
   background: #333; /* Darker active dot */
+}
+ .home-slider {
+  padding-left: 135px !important;
+}
+
+.home-slider .swiper-slide{
+  width: 657.143px !important;
+}
+
+@media screen and (max-width:1280px) {
+  
+.home-slider {
+  padding-left: 75px !important;
+}
+.home-slider .swiper-slide{
+  width: 457.143px !important;
+}
+
+}
+
+@media screen and (max-width:767px) {
+  
+.home-slider {
+  padding-left: 25px !important;
+}
+
 }

@@ -20,7 +20,7 @@ const HeroSlider = () => {
         spaceBetween={16}
         grabCursor={true}
         pagination={{ clickable: true }}
-        className="mySwiper"
+        className="mySwiper home-slider"
         breakpoints={{
           640: {
             slidesPerView: 1.2,
@@ -32,13 +32,13 @@ const HeroSlider = () => {
           },
           1024: {
             slidesPerView: 2.8,
-            spaceBetween: 24,
+            spaceBetween: 30,
           },
         }}
       >
         {slides.map((slideImage, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full max-w-[590px] mx-auto rounded-4xl border border-orange-300/10 shadow-lg shadow-orange-300/5 p-1">
+            <div className="w-full mx-auto rounded-4xl border border-orange-300/10 shadow-lg shadow-orange-300/5 p-1">
               <Image
                 src={slideImage}
                 alt={`Slide ${index + 1}`}

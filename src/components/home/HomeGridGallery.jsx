@@ -15,7 +15,7 @@ const GridGallery = () => {
   </span>
 </div>
 
-    <div className='w-full flex justify-center p-0 md:px-4 overflow-x-scroll' >
+    <div className='w-full grid grid-cols-1 xl:place-content-center xl:place-items-center  p-0 md:px-4 overflow-x-scroll' >
       <div
         className="relative inline-grid"
         style={{
