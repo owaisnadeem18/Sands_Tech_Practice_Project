@@ -5,16 +5,17 @@ import heroImg from '@/assets/images/dropBoxImg.webp'
 
 const GridGallery = () => {
   return (
-    <div className="w-full pt-20 overflow-x-auto md:overflow-x-auto pb-20 pl-4">
-        <div className="max-w-[16ch] pb-5 m-auto text-center text-3xl font-[450] text-neutral-700/50 lg:text-3xl 2xl:text-4xl">
+    <div className="w-full h-[96vh] bg-[linear-gradient(0deg,_#fff5e6,_#fff0eb_25%,_#faebf5_50%,_#f5f0ff_75%,_#fafaff)] pt-46 pb-40 md:pl-4 ">
+        <div className="max-w-[16ch] m-auto text-center pb-10 text-3xl font-[450] text-neutral-700/50 lg:text-3xl 2xl:text-4xl">
   <span
-    className="inline-block"
+    className="inline-block font-medium"
     style={{ filter: "blur(0px)", transform: "translateY(0px)", opacity: 1, willChange: "auto" }}
   >
     A design and technology studio.
   </span>
 </div>
 
+    <div className='w-full flex justify-center p-0 md:px-4 overflow-x-scroll' >
       <div
         className="relative inline-grid"
         style={{
@@ -98,6 +99,7 @@ const GridGallery = () => {
           </div>
         </div>
       </div>
+     </div>
     </div>
   )
 }
